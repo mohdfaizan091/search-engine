@@ -10,5 +10,6 @@ app.use(cors());
 const healthRoutes = require("./routes/health.routes");
 app.use("/", healthRoutes);
 
-
+const documentRoutes = require("./routes/documents.routes");
+app.use("/", documentRoutes);
 module.exports = app;
