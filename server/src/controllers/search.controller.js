@@ -32,7 +32,11 @@ function search(req, res) {
       title: doc.title,
       score: scores.get(doc.id),
     }))
-    .sort((a, b) => b.score - a.score);
+    .sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+        return a.title.localeCompare(b.title);
+    });
+
 
   res.json({
     query,

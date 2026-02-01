@@ -14,6 +14,10 @@ function createDocument(req, res) {
 
   const doc = addDocument({ title, content });
 
+  if (!doc) {
+    return res.status(409).json({ error: "duplicate document" });
+ }
+
   const tokens = tokenize(`${title} ${content}`);
 
   for( const word of tokens) {
