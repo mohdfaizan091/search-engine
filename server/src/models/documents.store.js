@@ -9,7 +9,7 @@ function addDocument({ title, content}) {
 }
 
 function getAllDocuments(){
-    return Array.from(documents.Value());
+    return Array.from(documents.values());
 }
 
 module.exports = {
