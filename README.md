@@ -83,25 +83,6 @@ Results are ranked using **term frequency**:
 
 ---
 
-##  Project Structure
-
-backend/
-└── src/
-├── index.js  # Server entry point
-├── app.js  # Express configuration
-├── routes/
-│ ├── health.routes.js
-│ ├── documents.routes.js
-│ └── search.routes.js
-├── controllers/
-│ ├── documents.controller.js
-│ └── search.controller.js
-├── models/
-│ ├── document.store.js  # In-memory document store
-│ └── index.store.js  # Inverted index store
-└── utils/
-├── tokenize.js
-└── stopwords.js
 
 ## 📡 API Endpoints
 
